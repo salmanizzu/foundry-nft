@@ -7,8 +7,8 @@ import {MoodNft} from "../src/MoodNft.sol";
 
 contract DeployMoodNft is Script {
     function run() external returns (MoodNft) {
-        string memory sadSvg = vm.readFile("./images/dynamicNft/sad.svg");
-        string memory happySvg = vm.readFile("./images/dynamicNft/happy.svg");
+        string memory sadSvg = vm.readFile("./images/sad.svg");
+        string memory happySvg = vm.readFile("./images/happy.svg");
 
         vm.startBroadcast();
         MoodNft moodNft = new MoodNft(svgToImageURI(sadSvg), svgToImageURI(happySvg));
