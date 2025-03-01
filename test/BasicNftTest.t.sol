@@ -10,7 +10,7 @@ contract BasicNftTest is Test {
     string constant NFT_SYMBOL = "DOG";
     BasicNft public basicNft;
     DeployBasicNft public deployer;
-    address public constant USER = address(1);
+    address public USER = makeAddr("user");
     string public constant PUG_URI =
         "ipfs://bafybeig37ioir76s7mg5oobetncojcm3c3hxasyd4rvid4jqhy4gkaheg4/?filename=0-PUG.json";
 
